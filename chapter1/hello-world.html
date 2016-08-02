@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<!--
+    The "ng-app" directive means AngularJS can work on anything in the <body> tag.
+    AngularJS elements will be properly interpreted inside.
+    Earlier, even if I added the "ng-app" attribute, I failed to import the 
+    AngularJS API by not typing the <script> tag and the proper AngularJS source.
+-->
+
+<body ng-app>
+    <input type="text" ng-model="name" placeholder="Enter your name">
+    <h1>Hello <span ng-bind="name"></span></h1>
+
+<script
+    src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.js">
+</script>
+</body>
+
+</html>

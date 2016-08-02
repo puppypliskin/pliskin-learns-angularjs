@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<!--
+    The value assigned to "ng-app" is optional. 
+    If this value is present, the value is interpreted as 
+    the module to load as the main entry point for the 
+    application.
+-->
+<html ng-app="notesApp">
+
+<head><title>Hello AngularJS Module</title></head>
+
+<!--
+    The "ng-controller" directive is used to tell AngularJS to 
+    instanciate a controller with the given name and attach it
+    to the HTML element.
+-->
+<body ng-controller="MainCtrl">
+    Hello {{1 + 1}}nd time AngularJS!
+
+<script
+    src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.js">
+</script>
+
+<!--
+        This is my first module definition. 
+        It doesn't have any dependencies yet, hence, the empty array as 2nd parameter.
+
+        The "controller" function is used to define a controller.
+        Arguments are the ff:
+            a) name of a controller function on the module
+            b) array of controller's dependencies
+                - names of dependencies of controller
+                - last argument is the actual controller function.
+
+        For this case, controller has no dependencies so only the function is defined
+        inside the array.
+
+        *This notation for defining controllers is the safe and recommended way.
+        There is another way but I'll wrap my mind around that some other time.
+        I want to learn and start coding this the right way.
+    -->
+<script type="text/javascript">
+    angular.module('notesApp',[]).
+        controller('MainCtrl', [function(){
+            // Controller-specific code goes here
+            console.log('MainCtrl has been created');
+        }]);
+</script>
+
+</body>
+</html>

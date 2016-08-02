@@ -12,6 +12,15 @@ we are allowing AngularJS to work on a particular HTML element.
 	<h1>1 + 3 = {{1 + 2}}</h1>
 </body>
 
+<!--
+    Hmmm... this is weird. I read from "Professional Javascript for Web Developers"
+    that placing the <script> tag at the end of the page outside the <body> and before
+    the <html> improves performance. However, when I view the source from the resulting 
+    web page, the script below is is colored red, like an indication of en HTML error...
+    
+    Now, I'm a little confused about where to really place the script tag.
+    For now, I'll copy the placement from "AngularJS Up and Running".
+-->
 <script
 	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.js">
 </script>
